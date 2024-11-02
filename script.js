@@ -44,6 +44,7 @@ const handleStart = () => {
 }
 const handlePause = () => {
 	clearInterval(countTime)
+	clearInterval(countTime)
 }
 const handleStop = () => {
 	time.innerHTML = `${stopwatch.textContent}`
@@ -51,16 +52,15 @@ const handleStop = () => {
 		time.style.visibility = 'visible'
 		timesArr.push(stopwatch.textContent)
 	}
-	clearStuff()
+	timeList.textContent = ''
 }
 const handleReset = () => {
 	time.style.visibility = 'hidden'
 	timesArr = []
 	clearStuff()
-}
-
-const clearStuff = () => {
 	clearInterval(countTime)
+}
+const clearStuff = () => {
 	timeList.textContent = ''
 	stopwatch.textContent = '0:00'
 	seconds = 0
